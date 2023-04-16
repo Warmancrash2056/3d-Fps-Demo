@@ -1,0 +1,47 @@
+2a60927148abd1d33b818b535e306557
+::res://::1681522340
+762x54r Single Isolated WAV.wav::AudioStreamWAV::1252161409080065351::1681522072::1681522195::1::::<><>::
+762x54r Spray Isolated WAV.wav::AudioStreamWAV::6706386594371798645::1681522072::1681522195::1::::<><>::
+Ak47.glb::PackedScene::9065648092915440466::1681522072::1681522195::1::::<><>::
+Ak47.tscn::PackedScene::3330025115690910782::1681522072::0::1::::<><>::
+AR Reload Full WAV.wav::AudioStreamWAV::8831198411077431863::1681522072::1681522195::1::::<><>::
+AR Reload Part 1 WAV.wav::AudioStreamWAV::3882614052235267288::1681522072::1681522195::1::::<><>::
+AR Reload Part 2 WAV.wav::AudioStreamWAV::7970429456875788739::1681522072::1681522195::1::::<><>::
+cz.wav::AudioStreamWAV::4165931904863523334::1681522072::1681522195::1::::<><>::
+Gun.gd::GDScript::-1::1681522072::0::1::::<>Node3D<>::
+Gun.tscn::PackedScene::391361611655270132::1681522072::0::1::::<><>::uid://bnpda6momocu5<>res://Gun.gd<>uid://r3s6ejoexgm6<>uid://bvk1c6vl35o3y<>uid://be8e4urxadond<>uid://dls62q2ubmtyx
+Lever Cycle Fast 2 WAV.wav::AudioStreamWAV::2735596257897338285::1681522072::1681522195::1::::<><>::
+::res://12 Low Poly Guns/::1681522129
+::res://12 Low Poly Guns/12 Low Poly Guns/::1681522132
+::res://12 Low Poly Guns/12 Low Poly Guns/Low Poly Guns Models/::1681522132
+AK47.fbx::::-1::0::0::0::::<><>::
+Desert Eagle.fbx::::-1::0::0::0::::<><>::
+Dragunov SVD.fbx::::-1::0::0::0::::<><>::
+Glock.fbx::::-1::0::0::0::::<><>::
+Kriss Vector Body.fbx::::-1::0::0::0::::<><>::
+Lugar.fbx::::-1::0::0::0::::<><>::
+M16.fbx::::-1::0::0::0::::<><>::
+M40.fbx::::-1::0::0::0::::<><>::
+MP5.fbx::::-1::0::0::0::::<><>::
+Pump Action Shotgun.fbx::::-1::0::0::0::::<><>::
+Revolver Bullet.fbx::::-1::0::0::0::::<><>::
+Revolver.fbx::::-1::0::0::0::::<><>::
+Sawed-Off Shotgun.fbx::::-1::0::0::0::::<><>::
+Shotgun Shell.fbx::::-1::0::0::0::::<><>::
+Sniper Bullet.fbx::::-1::0::0::0::::<><>::
+::res://FBX2glTF-windows-x86_64/::1681522172
+FBX2glTF-License.txt::TextFile::-1::1681522160::0::1::::<><>::
+::res://Player/::1681522115
+Head.gd::GDScript::-1::1681522072::0::1::::<>Node3D<>::
+Head.tscn::PackedScene::4709880396038694991::1681522072::0::1::::<><>::res://Player/Head.gd<>uid://fttwy4j5tm01
+MovementController.gd::GDScript::-1::1681522072::0::1::::MovementController<>CharacterBody3D<>::
+MovementController.tscn::PackedScene::806583487677930933::1681522072::0::1::::<><>::res://Player/MovementController.gd
+Player.tscn::PackedScene::2639203789098724694::1681522072::0::1::::<><>::uid://lqyku5wn2wo0<>uid://b8drbos167vf8<>res://Player/Sprint.gd
+Sprint.gd::GDScript::-1::1681522072::0::1::::<>Node<>::
+::res://sounds/::1681522213
+::res://sounds/sounds/::1681522217
+creativecommons.txt::TextFile::-1::1681522072::0::1::::<><>::
+cz.wav::AudioStreamWAV::7357384605338948846::1681522072::1681522195::1::::<><>::
+mosin.wav::AudioStreamWAV::5011846096837532026::1681522072::1681522195::1::::<><>::
+shotty.wav::AudioStreamWAV::6068966887760167104::1681522072::1681522195::1::::<><>::
+sks.wav::AudioStreamWAV::829939706890370048::1681522072::1681522195::1::::<><>::
