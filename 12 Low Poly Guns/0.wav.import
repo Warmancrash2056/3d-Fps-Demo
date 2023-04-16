@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dt0q5i3k7fd1s"
+path="res://.godot/imported/0.wav-3172ffea2f80e9bf01a79fb44e5b39d0.sample"
+
+[deps]
+
+source_file="res://12 Low Poly Guns/0.wav"
+dest_files=["res://.godot/imported/0.wav-3172ffea2f80e9bf01a79fb44e5b39d0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
