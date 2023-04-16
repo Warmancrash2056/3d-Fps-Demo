@@ -5,8 +5,13 @@
 [ext_resource type="Script" path="res://Player/Sprint.gd" id="3_bgqcu"]
 
 [node name="Player" instance=ExtResource("1_t1jcr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.480189, 0)
 
 [node name="Head" parent="." index="1" instance=ExtResource("2_41iu1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
 
 [node name="Sprint" type="Node" parent="." index="2"]
 script = ExtResource("3_bgqcu")
+
+[node name="AnimationPlayer" parent="." index="3"]
+speed_scale = 8.0

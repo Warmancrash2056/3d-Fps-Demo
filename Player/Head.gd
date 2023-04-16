@@ -13,7 +13,8 @@ enum States {
 	Idle,
 	AimingIn,
 	AimIdle,
-	AimingOut
+	AimingOut,
+	Bash
 }
 
 var Selection = States.Idle
@@ -43,6 +44,9 @@ func _process(delta):
 			if Input.is_action_just_pressed("Aim"):
 				Selection = States.AimingIn
 				
+			if Input.is_action_just_pressed("Bash"):
+				Selection = States.Bash
+				
 		States.AimingIn:
 			if Input.is_action_pressed("Aim"):
 				Zooming.play("Aim In")
@@ -60,7 +64,12 @@ func _process(delta):
 			
 			if Input.is_action_just_released("Aim"):
 				Selection = States.AimingOut
+				
+			if Input.is_action_just_pressed("Bash"):
+				Selection = States.Bash
 			
+		States.Bash:
+			Zooming.play("Bash")
 			
 
 # Called every physics tick. 'delta' is constant

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://fttwy4j5tm01"]
+[gd_scene load_steps=14 format=3 uid="uid://fttwy4j5tm01"]
 
 [ext_resource type="PackedScene" uid="uid://bnpda6momocu5" path="res://Ak47.tscn" id="1_nkpls"]
 [ext_resource type="Script" path="res://Gun.gd" id="2_7h7pd"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://bvk1c6vl35o3y" path="res://AR Reload Part 1 WAV.wav" id="4_cg2nt"]
 [ext_resource type="AudioStream" uid="uid://be8e4urxadond" path="res://Lever Cycle Fast 2 WAV.wav" id="5_scgfv"]
 [ext_resource type="AudioStream" uid="uid://dls62q2ubmtyx" path="res://AR Reload Part 2 WAV.wav" id="6_rjqt4"]
+[ext_resource type="AudioStream" uid="uid://b7cq4pft6ww27" path="res://12 Low Poly Guns/animal melee sound.wav" id="7_kc3j0"]
 
 [sub_resource type="Animation" id="Animation_b28mk"]
 length = 0.001
@@ -372,6 +373,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [16.0, 16.0]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AK47 Body:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.10472, 0, 0), Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_xor3f"]
 resource_name = "Stand"
@@ -473,8 +486,12 @@ tracks/7/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_qitvg"]
+resource_name = "Bash"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_50gpo"]
 _data = {
+"Bash": SubResource("Animation_qitvg"),
 "RESET": SubResource("Animation_b28mk"),
 "Reload": SubResource("Animation_mf5hc"),
 "Shooting": SubResource("Animation_c5bta"),
@@ -504,5 +521,8 @@ stream = ExtResource("5_scgfv")
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." index="6"]
 stream = ExtResource("6_rjqt4")
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="." index="7"]
+stream = ExtResource("7_kc3j0")
 
 [connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]

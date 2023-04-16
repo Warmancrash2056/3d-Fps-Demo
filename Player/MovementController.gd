@@ -1,6 +1,7 @@
 extends CharacterBody3D
 class_name MovementController
 
+@onready var Animate = $AnimationPlayer
 
 @export var gravity_multiplier := 3.0
 @export var speed := 10
@@ -10,11 +11,13 @@ class_name MovementController
 @export var jump_height := 10
 var direction := Vector3()
 var input_axis := Vector2()
+
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 @onready var gravity: float = (ProjectSettings.get_setting("physics/3d/default_gravity") 
 		* gravity_multiplier)
 
 enum States {
+	Idle,
 	Crouch,
 	CrouchIdle,
 	CrouchUp,
@@ -22,28 +25,48 @@ enum States {
 	ProneToCrouch
 }
 
+var Selection = States.Idle
 # Called every physics tick. 'delta' is constant
-func _physics_process(delta: float) -> void:
-	input_axis = Input.get_vector("move_back", "move_forward",
-			"move_left", "move_right")
-	
-	direction_input()
-	
-	if is_on_floor():
-		if Input.is_action_just_pressed(&"jump"):
-			velocity.y = jump_height
-	else:
-		velocity.y -= gravity * delta
-	
-	accelerate(delta)
-	
-	move_and_slide()
 
-	if Input.is_action_just_pressed("Crouch"):
-		$AnimationPlayer.play("Crouch")
-		
-	if Input.is_action_just_pressed("Crouch"):
-		$AnimationPlayer.play("Go UP")
+func _process(delta: float) -> void:
+	#print(Selection)
+	match Selection:
+		States.Idle:
+			print(input_axis)
+				
+
+			input_axis = Input.get_vector("move_back", "move_forward",
+					"move_left", "move_right")
+			
+			direction_input()
+			
+			if is_on_floor():
+				if Input.is_action_just_pressed(&"jump"):
+					velocity.y = jump_height
+			else:
+				velocity.y -= gravity * delta
+			
+			accelerate(delta)
+			
+			move_and_slide()
+
+			if Input.is_action_just_pressed("Crouch"):
+				Selection = States.Crouch
+		States.Crouch:
+			Animate.play("Crouch")
+			
+			if Input.is_action_just_pressed("Crouch"):
+				pass
+			
+		States.CrouchIdle:
+			Animate.play("Crouch Idle")
+			
+
+			if Input.is_action_pressed("Crouch"):
+				if Input.is_action_just_pressed("Crouch"):
+					print("Get Up")
+				else:
+					print("Prone")
 func direction_input() -> void:
 	direction = Vector3()
 	var aim: Basis = get_global_transform().basis
@@ -62,7 +85,7 @@ func accelerate(delta: float) -> void:
 		temp_accel = acceleration
 	else:
 		temp_accel = deceleration
-	
+		Animate.stop()
 	if not is_on_floor():
 		temp_accel *= air_control
 	
@@ -74,4 +97,4 @@ func accelerate(delta: float) -> void:
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "Crouch":
-		$AnimationPlayer.play("Crouch Idle")
+		Selection = States.CrouchIdle

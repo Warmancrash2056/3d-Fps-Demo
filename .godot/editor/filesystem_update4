@@ -1,0 +1,5 @@
+res://Main/L_Main.tscn
+res://Player/Head.tscn
+res://Player/Player.tscn
+res://Player/MovementController.tscn
+res://Player/MovementController.gd
